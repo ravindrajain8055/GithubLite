@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://avengerravi:ravi@8055@arjpro-cxtju.mongodb.net/Linkeder?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://avengerravi:ravi@8055@arjpro-cxtju.mongodb.net/Linkeder?retryWrites=true&w=majority",
+    "jwtSecret": "mySecrettoken"
 }
