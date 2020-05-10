@@ -7,11 +7,6 @@ const ProfileSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'user'
   },
-  handle: {
-    type: String,
-    required: true,
-    max: 40
-  },
   company: {
     type: String
   },
@@ -76,8 +71,7 @@ const ProfileSchema = new Schema({
       required: true
     },
     from: {
-      type: Date,
-      required: true
+      type: Date
     },
     to: {
       type: Date

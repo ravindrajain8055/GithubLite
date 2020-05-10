@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://avengerravi:ravi@8055@arjpro-cxtju.mongodb.net/Linkeder?retryWrites=true&w=majority",
-    "jwtSecret": "mySecrettoken"
+    "jwtSecret": "mySecrettoken",
+    "githubClientId": "c459d92e62c7b4297f05",
+    "githubSecret": "1705b3fa8a29efc7e2c45bc7c1509794fd6d638e"
 }

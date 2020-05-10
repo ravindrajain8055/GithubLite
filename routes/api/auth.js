@@ -28,7 +28,21 @@ router.get('/', auth, async (req, res) => {
     }
 })
 
-module.exports = router
+// route GET api/auth
+// access public
+router.get('/users', async (req, res) => {
+    try {
+        const user = await User.find().select('-password')
+        res.status(200).json({
+            user
+        })
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).json({
+            success: false
+        })
+    }
+})
 
 // access Public
 // login user
@@ -96,4 +110,6 @@ router.post('/', [
                 success: false
             })
         }
-    })
+    });
+
+module.exports = router
