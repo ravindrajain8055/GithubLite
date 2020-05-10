@@ -391,6 +391,19 @@ router.get("/github/:username", async (req, res) => {
       }
       res.json(JSON.parse(body))
     })
+    // const uri = encodeURI(
+    //   `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc
+    //   &client_id=${config.get('githubClientId')}&client_secret=${config.get('githubSecret')}`
+    // );
+    // const headers = {
+    //   'user-agent': 'node.js',
+    //   Authorization: `token ${config.get('githubToken')}`
+    // };
+
+    // const gitHubResponse = await axios.get(uri, {
+    //   headers
+    // });
+    // return res.json(gitHubResponse.data);
   } catch (err) {
     console.error(err.message);
     return res.status(404).json({
