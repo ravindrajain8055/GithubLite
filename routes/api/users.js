@@ -11,15 +11,7 @@ const jwt = require('jsonwebtoken')
 const config = require('config')
 
 // access Public
-// route GET api/users
-router.get('/', async (req, res) => {
-    const users = await User.find();
-    res.status(200).json({
-        data: users
-    })
-})
-
-// access Public
+// Registerr user
 // route POST api/users
 router.post('/', [check('name', 'Name is required').not().isEmpty(),
         check('email', 'Please add a valid email').isEmail(),
@@ -50,7 +42,7 @@ router.post('/', [check('name', 'Name is required').not().isEmpty(),
             });
 
             if (user) {
-                res.status(400).json({
+                return res.status(400).json({
                     errors: [{
                         msg: "user already exists"
                     }]
