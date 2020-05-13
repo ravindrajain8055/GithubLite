@@ -11,7 +11,7 @@ const jwt = require('jsonwebtoken')
 const config = require('config')
 
 // access Public
-// Registerr user
+// Register user
 // route POST api/users
 router.post('/', [check('name', 'Name is required').not().isEmpty(),
         check('email', 'Please add a valid email').isEmail(),
