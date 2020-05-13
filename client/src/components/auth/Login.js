@@ -6,11 +6,11 @@ import {login } from '../../actions/auth'
 
 const Login = ({login, isAuthenticated}) => {
     const [formData, setFormData] = useState({
-        name:'',
-        email:''
+        email:'',
+        password:''
     });
 
-    const { email,password} = formData;
+    const { email, password } = formData;
 
     const onChange = e =>setFormData({...formData,[e.target.name]:e.target.value})
 
