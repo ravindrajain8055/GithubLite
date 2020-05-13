@@ -6,20 +6,17 @@ const {
     check,
     validationResult
 } = require('express-validator')
-const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const config = require('config')
 
-
+// A test Route for frontend 
 // route GET api/auth
 // access public
 router.get('/', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('-password')
-        res.status(200).json({
-            user
-        })
+        res.status(200).json(user)
     } catch (err) {
         console.error(err.message);
         res.status(500).json({
