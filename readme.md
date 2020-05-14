@@ -12,9 +12,8 @@ npm install
 ```
 
 ## Run App
-
-```
 # Run in dev mode to run both servers for Frontend and Backend concurrently
+```
 npm run dev
 ```
 
