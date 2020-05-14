@@ -1,5 +1,4 @@
 const express = require("express");
-const axios = require("axios");
 const config = require("config");
 const router = express.Router();
 const request = require('request')
@@ -172,9 +171,9 @@ router.get(
 router.delete("/", auth, async (req, res) => {
   try {
     // Remove user posts
-    // await Post.deleteMany({
-    //   user: req.user.id
-    // });
+    await Post.deleteMany({
+      user: req.user.id
+    });
     // Remove profile
     await Profile.findOneAndRemove({
       user: req.user.id
