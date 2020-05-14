@@ -1,7 +1,4 @@
 # Githublite
-
-
-
 ## Install server Dependencies
 
 ```
